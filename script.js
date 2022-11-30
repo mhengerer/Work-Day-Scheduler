@@ -1,7 +1,8 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-
+ var today = dayjs();
+  var CurTime = dayjs().hour();
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -10,8 +11,7 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
-  var today = dayjs();
-  var CurTime = dayjs().hour();
+ 
 
   $(".saveBtn").on("click", function () {
     // get the hour
